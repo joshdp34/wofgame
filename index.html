@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wheel of Fortune Game</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="game-container">
+        <button id="newGameBtn">New Game</button>
+        <div id="phraseDisplay" class="phrase-display"></div>
+        <div id="message" class="message"></div>
+        <input type="text" id="inputLetter" maxlength="1" autofocus>
+        <button id="showSolutionBtn">Show Solution</button>
+    </div>
+
+    <!-- Section for displaying letters and their Scrabble points -->
+    <div class="alphabet-container">
+        <div id="alphabetDisplay" class="alphabet-display"></div>
+    </div>
+
+    <!-- Hidden dialog for phrase input -->
+    <div id="dialog" class="dialog">
+        <div class="dialog-content">
+            <h3>Enter a phrase:</h3>
+            <input type="text" id="newPhraseInput">
+            <button id="startGameBtn">Start Game</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

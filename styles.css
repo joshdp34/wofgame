@@ -1,0 +1,135 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+}
+
+.game-container {
+    text-align: center;
+}
+
+.phrase-display {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 20px;
+    gap: 10px;
+}
+
+.tile {
+    width: 60px;
+    height: 80px;
+    background-color: #333;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2em;
+    border-radius: 5px;
+    position: relative;
+    perspective: 1000px;
+    text-transform: uppercase;
+    border: 2px solid black;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+}
+
+.tile .front,
+.tile .back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    backface-visibility: hidden;
+}
+
+.tile .front {
+    background-color: #333;
+    color: white;
+}
+
+.tile .back {
+    background-color: #28a745; /* Green background for revealed letters */
+    color: white;
+    transform: rotateY(180deg);
+}
+
+.flipped {
+    transform: rotateY(180deg);
+}
+
+.message {
+    margin-top: 20px;
+    font-size: 1.5em;
+    color: red;
+}
+
+#inputLetter {
+    margin-top: 20px;
+    font-size: 1.2em;
+}
+
+button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 1.2em;
+}
+
+/* Dialog styles */
+.dialog {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    border: 2px solid #000;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.dialog-content {
+    text-align: center;
+}
+
+.dialog input {
+    font-size: 1.2em;
+    padding: 5px;
+    margin-bottom: 10px;
+}
+
+.space {
+    width: 30px; /* Adjust width to control space size */
+}
+
+
+.alphabet-container {
+    margin-top: 30px;
+    text-align: center;
+}
+
+.alphabet-display {
+    display: grid;
+    grid-template-columns: repeat(9, 1fr); /* 9 letters per row */
+    gap: 10px;
+    justify-items: center;
+    margin-top: 20px;
+}
+
+.alphabet-letter {
+    color: darkgreen;
+    font-size: 1.5em;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.guessed {
+    color: lightgrey;
+}
